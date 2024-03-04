@@ -1,0 +1,1238 @@
+﻿<html lang="en">
+
+<head>
+
+
+
+   <meta http-equiv="Expires" content="0">
+
+   <meta http-equiv="Last-Modified" content="0">
+
+   <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+
+   <meta http-equiv="Pragma" content="no-cache">
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CALCULADORA MIDOMO</title>
+
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+
+  <link rel="stylesheet" href="sheetdomo.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <script src="tabla.js"></script>
+
+  <script src="calcv4.js"></script>
+
+	<script type="text/javascript">
+
+	$(window).load(function() {
+
+    $(".loader").fadeOut("slow");
+
+	});
+
+	</script>
+
+  <!-- <script type="text/javascript" src="cssrefresh.js"></script> -->
+
+</head>
+
+<body onload="iniciar()">
+
+<div class="loader"></div>
+
+<div id="total" >
+
+
+
+	<div id="cabecera">
+
+ 
+
+ <div id="logo"> 
+
+ <img   src="img1/logo.jpg" style="width: 280px; height: 96px">
+
+ </div> 		
+
+ <div id="menu">
+
+ 		<div >
+
+			<p>&nbsp;<img id="Efrecuencia" src="img1/Efrecuencia.jpg" style="width: 210px; height: 18px" > </p>
+
+		</div>
+
+	
+
+			<img id="V4" src="img1/tbv4.jpg" onclick="openFrecuencia(event, 'V4')" style="width: 121px; height: 78px"> 
+
+			<img id="V34" src="img1/tbv34.jpg" onclick="openFrecuencia(event, 'V34')" style="width: 121px; height: 78px">
+
+			<img id="V35" src="img1/tbv35.jpg" onclick="openFrecuencia(event, 'V35')" style="width: 121px; height: 78px">
+
+			<img id="V34" src="img1/tbv34.jpg" onclick="openFrecuencia(event, 'V34')" style="width: 121px; height: 78px">
+
+			<img id="V35" src="img1/tbv35.jpg" onclick="openFrecuencia(event, 'V35')" style="width: 121px; height: 78px">
+
+
+			
+
+</div>
+
+
+
+
+
+ <div>
+
+			<img id="linea" src="img1/linea1.jpg"> 
+
+</div>
+
+	</div>
+
+	<div id="resto">	
+
+
+
+
+
+		<!-- Tab content -->
+
+	<div  id="tbV4" class="tabcontent" >
+
+
+
+	<div id="tablamain"> 
+
+		<div id="imagenv4">
+
+			<img id="imagenV4" src="img1/imagenV4.jpg" style="width: 220px; height: 88px"> 
+
+		</div> 
+
+		<div id="diametrogrosor" >
+
+			<table id="tabladiametrogrosor">
+
+			<tr>
+
+				<td>DIÁMETRO </td> <td><input type="text" id="diametro" name="diametro"  size="3" > m</td>
+
+			</tr>
+
+			<tr>
+
+				<td>GROSOR </td> <td><input type="text" id="grosor" name="grosor"  size="3" > cm</td>
+
+			</tr>
+
+			<tr> <td style="text-align: center" colspan= "2"><button class="btn" type="button" onclick="calcularv4()">Calcular</button></td></tr>
+
+			</table>
+
+
+
+	</div>
+
+		<div id="tablacontenidos4">
+
+			 <table id="tablamaint" >
+
+	 			<tr>
+
+					<th>ARISTA</th>
+
+					<th> ÁNGULO AXIAL</th>
+
+					<th>LONGITUD TOTAL </th>
+
+					<th colspan="2" style="background-color: #e6e6e6;">LONGITUD A CORTAR </th>
+
+					<th colspan="2">UNIDADES A CORTAR </th>
+
+		
+
+	  			</tr>
+
+	 		    <tr> 
+
+	       <!-- style="width: 53px; height: 57px" -->
+
+		          	<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/a.jpg" style="width: 53px; height: 57px"  ></td>
+
+		          	<td  style="border-bottom: solid 2px;" rowspan= "2">7.3º</td>
+
+		          	<td style="border-bottom: solid 2px;" id="lta" rowspan= "2"></td>
+
+		        	<td width= 25px >1</td>
+
+					<td width= 100px style="font-size:1.09em; background-color: #e6e6e6;" id="lca1"></td>
+
+					<td width= 100px style="font-size:1.09em;" >30</td>
+
+					<td width= 25px style="text-align: right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/amarillo.jpg" style="width: 23px; height: 57px"></td>
+
+		
+
+	  			</tr>
+
+	  			<tr>
+
+		  			<td  style="font-size: 0.9em; border-bottom: solid 2px;">2</td>
+
+		  			<td  style="font-size:1.09em; border-bottom: solid 2px; background-color: #e6e6e6;" id="lca2"></td>
+
+		  			<td  style="font-size:1.09em; border-bottom: solid 2px;">30</td>
+
+
+
+	  			</tr>
+
+				 <tr>
+
+					<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/b.jpg" style="width: 48px; height: 57px"  ></td>
+
+					<td style="border-bottom: solid 2px;" rowspan= "2">8.5º</td>
+
+					<td style="border-bottom: solid 2px;" id="ltb" rowspan= "2"></td>
+
+					<td >1</td>
+
+					<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcb1" ></td>
+
+					<td style="font-size:1.09em;">30</td>
+
+					<td style="text-align: right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/rojo3.jpg" style="width: 23px; height: 57px"></td>
+
+		
+
+	  			</tr>
+
+	 			 <tr>
+
+	  				<td style="font-size: 0.9em; border-bottom: solid 2px;" >2</td>
+
+	  				<td style="font-size: 1.09em; border-bottom: solid 2px; background-color: #e6e6e6;" id="lcb2"></td>
+
+	  <				td style="font-size: 1.09em; border-bottom: solid 2px;" >30</td>
+
+	  			</tr>
+
+	 			<tr>
+
+					<td style="text-align:left; border-bottom: solid 2px;" rowspan= "3"><img src="img1/c.jpg" style="width: 53px; height: 87px" ></td>
+
+					<td style="border-bottom: solid 2px;" rowspan= "3">8.5º</td>
+
+					<td style="border-bottom: solid 2px;" id="ltc"rowspan= "3"></td>
+
+					<td>1</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcc1"></td>
+
+					<td style="font-size: 1.09em;" >60</td>
+
+					<td style="text-align: right; border-bottom: solid 2px;" rowspan= "3"><img src="img1/azul.jpg" style="width: 23px; height: 87px"></td>
+
+	  			</tr>
+
+				<tr>
+
+					<td style="font-size: 0.9em;">2</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcc2"></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+
+
+				</tr>  
+
+				
+
+				<tr>
+
+					<td style="font-size: 0.9em; border-bottom: solid 2px;">3</td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px; background-color: #e6e6e6;" id="lcc3"></td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px;" >30</td>
+
+
+
+				</tr> 
+
+				<tr>
+
+					<td style="text-align:left; border-bottom: solid 2px;" style="border-bottom: solid 2px;" rowspan= "4"><img src="img1/d.jpg" style="width: 53px; height: 113px" ></td>
+
+					<td style="border-bottom: solid 2px;" rowspan= "4">9º</td>
+
+					<td style="border-bottom: solid 2px;" id="ltd" rowspan= "4"></td>
+
+					<td >1</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcd1"></td>
+
+					<td style="font-size: 1.09em;" >30</td>
+
+					<td style="text-align: right; border-bottom: solid 2px;" rowspan= "4"><img src="img1/verde.jpg" style="width: 23px; height: 113px"></td>
+
+				</tr>
+
+				<tr>
+
+					<td style="font-size: 0.9em;">2</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcd2"></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+				</tr>	
+
+				<tr>
+
+					<td style="font-size: 0.9em;">3</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcd3"></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+				</tr>  
+
+				<tr>
+
+					<td style="font-size: 0.9em; border-bottom: solid 2px;">4</td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px; background-color: #e6e6e6;" id="lcd4"></td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px;" >30</td>
+
+				</tr>   
+
+				<tr>
+
+					<td style="text-align:left; border-bottom: solid 2px;"  rowspan= "2"><img src="img1/e.jpg" style="width: 48px; height: 57px" ></td>
+
+					<td style="border-bottom: solid 2px;" rowspan= "2">9.3º</td>
+
+					<td style="border-bottom: solid 2px;" id="lte" rowspan= "2"></td>
+
+					<td >1</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lce1"></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+					<td style="text-align: right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/morado.jpg" style="width: 23px; height: 57px"></td>
+
+				</tr>
+
+				<tr>
+
+					<td style="font-size: 0.9em; border-bottom: solid 2px;">2</td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px; background-color: #e6e6e6;" id="lce2"></td>
+
+					<td style="font-size: 1.09em; border-bottom: solid 2px;" >30</td>
+
+				</tr>	
+
+				<tr>
+
+					<td style="text-align:left;" rowspan= "2"><img src="img1/f.jpg" style="width: 48px; height: 57px"></td>
+
+					<td rowspan= "2">8.6º</td>
+
+					<td id="ltf" rowspan= "2"></td>
+
+					<td>1</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcf1"></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+					<td style="text-align:right;" rowspan= "2"><img src="img1/naranja.jpg" style="width: 23px; height: 57px"></td>
+
+				</tr>
+
+				<tr>
+
+					<td style="font-size: 0.9em;">2</td>
+
+					<td style="font-size: 1.09em; background-color: #e6e6e6;" id="lcf2" ></td>
+
+					<td style="font-size: 1.09em;">30</td>
+
+				</tr>	
+
+	 </table>
+
+	</div>
+
+
+
+</div>
+
+
+
+<div id="columna2"> 
+
+	<div id="trianguloscapa">
+
+		<img id="triangulos" src="img1/triangulosV4.jpg" > 
+
+	</div>
+
+	<p><div style="margin-left: 195px"><button class="btn" type="button" onclick="abriremv4()">Esquema de montaje</button></div></p>
+
+	<div id="tablamamaderacapa">
+
+		<table id="tablamamadera" >
+
+		<tr >
+
+		<td rowspan= "4">MADERA        
+
+		 <select id="densidad" style="width: 130px;" onchange="densi()">
+
+		  <option value="450" selected>Abeto (450 Kg/m&sup3)</option>
+
+		  <option value="500">Pino insignis( 500 Kg/m&sup3)</option>
+
+		  <option value="590">Castaño (590 Kg/m&sup3)</option>
+
+		   <option value="730">Haya europea (730 Kg/m&sup3)</option>  
+
+		  <option value="770">Roble europeo (770 Kg/m&sup3)</option>
+
+
+
+		</select> </td>
+
+		<td>Volumen</td>
+
+		<td align= "right" style="border-left: none;"><label id="cantidad"></label></td>
+
+
+
+
+
+		</tr>
+
+		<tr  >
+
+		<td>Peso</td>
+
+		<td align= "right" style="border-left: none;" id="peso"></td>
+
+
+
+
+
+		</tr>
+
+		<tr  >
+
+		<td>Ancho listones</td>
+
+		<td align= "right" style="border-left: none;"><input type="text" id="ancho" name="ancho" size="3" value="7" onfocusout="calcular1()" > cm</td>
+
+
+
+
+
+		</tr>
+
+		<tr >
+
+		<td>Metros lineales   </td>
+
+		<td align= "right" style="border-left: none;" id="tm"></td>
+
+
+
+		</tr>
+
+		<tr  style="border-top: solid 2px;"  >
+
+		<td rowspan= "3">DOMO</td>
+
+		<td>Altura</td>
+
+		<td align= "right" style="border-left: none;" id="altura"></td>
+
+
+
+
+
+		</tr>
+
+		<tr >
+
+		<td >Superficie base</td>
+
+		<td align= "right" id= "ab" style="border-left: none;"></td>
+
+
+
+
+
+		</tr>
+
+		<tr >
+
+		<td>Superficie cubierta</td>
+
+		<td align= "right" id= "ac" style="border-left: none;"></td>
+
+
+
+
+
+		</tr>
+
+		</table>
+
+		<br>
+
+
+
+		<br>
+
+
+
+	</div>
+
+
+
+</div>
+
+
+
+
+
+   </div> 
+
+ 
+
+ <div  id="tbV34" class="tabcontent" >
+
+
+
+<div id="tablamain34"> 
+
+	<div id="imagenv34">
+
+		<img src="img1/imagenV34.jpg" style="width: 287px; height: 78px" > 
+
+	</div> 
+
+	<div id="diametrogrosor34" >
+
+		<table id="tabladiametrogrosor34">
+
+			<tr>
+
+				<td>DIÁMETRO </td> <td><input type="text" id="diametro31" name="diametro31"  size="3" > m</td>
+
+			</tr>
+
+			<tr>
+
+				<td>GROSOR </td> <td><input type="text" id="grosor31" name="grosor31"  size="3" > cm</td>
+
+			</tr>
+
+			<tr> <td style="text-align: center" colspan= "2"><button class="btn" type="button" onclick="calcularv34()">Calcular</button></td></tr>
+
+		</table>
+
+
+
+	</div>	
+
+	<div id="tablacontenidos34">
+
+	
+
+	<table  id="tablamaint34" >
+
+	 <tr>
+
+		<th>ARISTA</th>
+
+		<th> ÁNGULO AXIAL</th>
+
+		<th >LONGITUD TOTAL </th>
+
+		<th style="background-color: #e6e6e6" colspan="2">LONGITUD A CORTAR </th>
+
+		<th colspan="2">UNIDADES A CORTAR </th>
+
+		
+
+	  </tr>
+
+	 <tr> 
+
+		<td style="text-align:left; border-bottom: solid 2px;" id="a" rowspan= "2"><img src="img1/a3.jpg" style="width: 53px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">9.5º</td>
+
+		<td style="border-bottom: solid 2px;"  id="lta31" rowspan= "2"></td>
+
+
+
+		<td width= 25px>1</td>
+
+		<td width= 100px style="font-size:1.09em; background-color: #e6e6e6" id="lca131"></td>
+
+		<td width= 100px style="font-size:1.09em; border-right: none;"  >30</td>
+
+		<td width= 25px style="text-align:right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/rojo3.jpg" style="width: 23px; height: 57px"></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em; border-bottom: solid 2px;">2</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lca231"></td>
+
+	  <td style="font-size:1.09em; border-bottom: solid 2px;">30</td>
+
+
+
+	  </tr>
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/b3.jpg" style="width: 48px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">11.0º</td>
+
+		<td style="border-bottom: solid 2px;"  id="ltb31" rowspan= "2"></td>
+
+		<td>1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcb131" ></td>
+
+		<td style="font-size:1.09em;">30</td>
+
+		<td style="text-align:right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/azul3.jpg" style="width: 23px; height: 57px"></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td  style="font-size:0.9em; border-bottom: solid 2px;" >2</td>
+
+	  <td  style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lcb231"></td>
+
+	  <td  style="font-size:1.09em; border-bottom: solid 2px;" >25</td>
+
+
+
+	  </tr>
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "4"><img src="img1/c3.jpg" style="width: 53px; height: 123px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "4">12.2º</td>
+
+		<td style="border-bottom: solid 2px;"  id="ltc31" rowspan= "4"></td>
+
+		<td>1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc131"></td>
+
+		<td style="font-size:1.09em;">25</td>
+
+		<td style="text-align:right; border-bottom: solid 2px;" rowspan= "4"><img src="img1/verde3.jpg" style="width: 23px; height: 123px" ></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em;">2</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc231"></td>
+
+	  <td style="font-size:1.09em;">25</td>
+
+
+
+	  </tr>  
+
+		</tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em;">3</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc331"></td>
+
+	  <td style="font-size:1.09em;">20</td>
+
+	  </tr> 
+
+	  <tr>
+
+	  <td style="font-size:0.9em; border-bottom: solid 2px;" >4</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lcc431"></td>
+
+	  <td style="font-size:1.09em; border-bottom: solid 2px;" >20</td>
+
+
+
+	  </tr> 
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/d3.jpg" style="width: 48px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">12.7º</td>
+
+		<td style="border-bottom: solid 2px;" id="ltd31" rowspan= "2"></td>
+
+		
+
+		<td>1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6; " id="lcd131"></td>
+
+		<td style="font-size:1.09em;" >20</td>
+
+		<td style="text-align:right;" rowspan= "2"><img src="img1/amarillo3.jpg" style="width: 23px; height: 57px"></td>
+
+		
+
+	  </tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em;"></td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" >---</td>
+
+	  <td style="font-size:1.09em;">--</td>
+
+
+
+	  </tr>	
+
+	 </table>
+
+	</div>
+
+</div> <!-- // tbV34.contenido -->
+
+
+
+<div id="columna234"> 
+
+	<div id="trianguloscapa34">
+
+		<img id="triangulos34" src="img1/triangulosV34.jpg" style="width: 525px; height: 174px" > 
+
+	</div>
+
+	<p><div style="margin-left: 195px"><button class="btn" type="button" onclick="abriremv34()">Esquema de montaje</button></div></p>
+
+	<div id="tablamamaderacapa34">
+
+	<table id="tablamamadera34" >
+
+	<tr >
+
+	<td rowspan= "4">MADERA
+
+	 <select id="densidad31" style="width: 130px;" onchange="densi31()">
+
+	  <option value="450">Abeto (450 Kg/m&sup3) </option>
+
+	  <option value="500">Pino insignis (500 Kg/m&sup3) </option>
+
+	  <option value="590">Castaño (590 Kg/m&sup3) </option>
+
+	   <option value="730">Haya europea (730 Kg/m&sup3) </option>  
+
+	  <option value="770">Roble europeo (770 Kg/m&sup3) </option>
+
+
+
+	</select></td>
+
+	<td>Volumen</td>
+
+	<td align= "right" style="border-left: none;" ><label id="cantidad31"></label></td>
+
+
+
+
+
+	</tr>
+
+	<tr>
+
+	<td>Peso</td>
+
+	<td align= "right" style="border-left: none;" id="peso31"></td>
+
+
+
+
+
+	</tr>
+
+	<tr>
+
+	<td>Ancho listones </td>
+
+	<td align= "right" style="border-left: none;"><input type="text" id="ancho31" name="ancho31"  size="3" value="7" onfocusout="calcular2()" > cm</td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td>Metros lineales </td>
+
+	<td align= "right" id="tm31" style="border-left: none;"></td>
+
+
+
+	</tr>
+
+	<tr style="border-top: solid 2px;" >
+
+	<td rowspan= "3">DOMO</td>
+
+	<td>Altura</td>
+
+	<td align= "right" id="altura31" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td >Superficie base</td>
+
+	<td align= "right" id= "ab31" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td>Superficie cubierta</td>
+
+	<td align= "right" id= "ac31" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	</table>
+
+	 <br>
+
+	 <br>
+
+		</div>
+
+</div>
+
+
+
+</div> 
+
+
+
+
+
+<div  id="tbV35" class="tabcontent" >
+
+
+
+<div id="tablamain34"> 
+
+	<div id="imagenv34">
+
+		<img src="img1/imagenV35.jpg" style="width: 287px; height: 78px" > 
+
+	</div> 
+
+	<div id="diametrogrosor34" >
+
+		<table id="tabladiametrogrosor34">
+
+			<tr>
+
+				<td>DIÁMETRO </td> <td><input type="text" id="diametro32" name="diametro32"  size="3" > m</td>
+
+			</tr>
+
+			<tr>
+
+				<td>GROSOR </td> <td><input type="text" id="grosor32" name="grosor32"  size="3" > cm</td>
+
+			</tr>
+
+			<tr> <td style="text-align: center" colspan= "2"><button class="btn" type="button" onclick="calcularv35()">Calcular</button></td></tr>
+
+		</table>
+
+
+
+	</div>	
+
+	<div id="tablacontenidos34">
+
+	
+
+	<table  id="tablamaint34" >
+
+	 <tr>
+
+		<th>ARISTA</th>
+
+		<th> ÁNGULO AXIAL</th>
+
+		<th >LONGITUD TOTAL </th>
+
+		<th style="background-color: #e6e6e6" colspan="2">LONGITUD A CORTAR </th>
+
+		<th colspan="2">UNIDADES A CORTAR </th>
+
+		
+
+	  </tr>
+
+	 <tr> 
+
+		<td style="text-align:left; border-bottom: solid 2px;" id="a" rowspan= "2"><img src="img1/a3.jpg" style="width: 53px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">9.5º</td>
+
+		<td style="border-bottom: solid 2px;"  id="lta32" rowspan= "2"></td>
+
+
+
+		<td width= 25px>1</td>
+
+		<td width= 100px style="font-size:1.09em; background-color: #e6e6e6" id="lca132"></td>
+
+		<td width= 100px style="font-size:1.09em; border-right: none;"  >30</td>
+
+		<td width= 25px style="text-align:right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/rojo3.jpg" style="width: 23px; height: 57px"></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em; border-bottom: solid 2px;">2</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lca232"></td>
+
+	  <td style="font-size:1.09em; border-bottom: solid 2px;">30</td>
+
+
+
+	  </tr>
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/b3.jpg" style="width: 48px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">11.0º</td>
+
+		<td style="border-bottom: solid 2px;"  id="ltb32" rowspan= "2"></td>
+
+		<td>1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcb132" ></td>
+
+		<td style="font-size:1.09em;">30</td>
+
+		<td style="text-align:right; border-bottom: solid 2px;" rowspan= "2"><img src="img1/azul3.jpg" style="width: 23px; height: 57px"></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td  style="font-size:0.9em; border-bottom: solid 2px;" >2</td>
+
+	  <td  style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lcb232"></td>
+
+	  <td  style="font-size:1.09em; border-bottom: solid 2px;" >35</td>
+
+
+
+	  </tr>
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "4"><img src="img1/c3.jpg" style="width: 53px; height: 123px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "4">12.2º</td>
+
+		<td style="border-bottom: solid 2px;"  id="ltc32" rowspan= "4"></td>
+
+		<td>1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc132"></td>
+
+		<td style="font-size:1.09em;">35</td>
+
+		<td style="text-align:right; border-bottom: solid 2px;" rowspan= "4"><img src="img1/verde3.jpg" style="width: 23px; height: 123px"></td>
+
+	  </tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em;">2</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc232"></td>
+
+	  <td style="font-size:1.09em;">35</td>
+
+
+
+	  </tr>  
+
+		</tr>
+
+	  <tr>
+
+	  <td style="font-size:0.9em;">3</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6;" id="lcc332"></td>
+
+	  <td style="font-size:1.09em;">40</td>
+
+	  </tr> 
+
+	  <tr>
+
+	  <td style="font-size:0.9em; border-bottom: solid 2px;" >4</td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" id="lcc432"></td>
+
+	  <td style="font-size:1.09em; border-bottom: solid 2px;" >40</td>
+
+
+
+	  </tr> 
+
+	 <tr>
+
+		<td style="text-align:left; border-bottom: solid 2px;" rowspan= "2"><img src="img1/d3.jpg" style="width: 48px; height: 57px" ></td>
+
+		<td style="border-bottom: solid 2px;" rowspan= "2">12.7º</td>
+
+		<td style="border-bottom: solid 2px;" id="ltd32" rowspan= "2"></td>
+
+		<td >1</td>
+
+		<td style="font-size:1.09em; background-color: #e6e6e6;" id="lcd132"></td>
+
+		<td style="font-size:1.09em;" >40</td>
+
+		<td style="text-align:right;" rowspan= "2"><img src="img1/amarillo3.jpg" style="width: 23px; height: 57px"></td>
+
+		
+
+	  </tr>
+
+		  <tr>
+
+	  <td style="font-size:0.9em;"></td>
+
+	  <td style="font-size:1.09em; background-color: #e6e6e6; border-bottom: solid 2px;" >---</td>
+
+	  <td style="font-size:1.09em;">--</td>
+
+
+
+	  </tr>	
+
+	 </table>
+
+	</div>
+
+</div>
+
+
+
+<div id="columna234"> 
+
+	<div id="trianguloscapa34">
+
+		<img id="triangulos34" src="img1/triangulosV35.jpg" style="width: 525px; height: 174px" >
+
+	</div>
+
+		<p><div style="margin-left: 195px"><button class="btn" type="button" onclick="abriremv35()">Esquema de montaje</button></div></p>
+
+	<div id="tablamamaderacapa34">
+
+	<table id="tablamamadera34" >
+
+	<tr >
+
+	<td rowspan= "4">MADERA
+
+	 <select id="densidad32" style="width: 130px;" onchange="densi32()">
+
+	  <option value="450">Abeto (450 Kg/m&sup3) </option>
+
+	  <option value="500">Pino insignis (500 Kg/m&sup3) </option>
+
+	  <option value="590">Castaño (590 Kg/m&sup3) </option>
+
+	   <option value="730">Haya europea (730 Kg/m&sup3) </option>  
+
+	  <option value="770">Roble europeo (770 Kg/m&sup3) </option>
+
+
+
+	</select></td>
+
+	<td>Volumen</td>
+
+	<td align= "right" style="border-left: none;" ><label id="cantidad32"></label></td>
+
+
+
+
+
+	</tr>
+
+	<tr  >
+
+	<td>Peso</td>
+
+	<td align= "right" style="border-left: none;" id="peso32"></td>
+
+
+
+
+
+	</tr>
+
+	<tr  >
+
+	<td>Ancho listones </td>
+
+	<td align= "right" style="border-left: none;"><input type="text" id="ancho32" name="ancho32"  size="4" value="7" onfocusout="calcular3()" > cm</td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td>Metros lineales </td>
+
+	<td align= "right" id="tm32" style="border-left: none;"></td>
+
+
+
+	</tr>
+
+	<tr style="border-top: solid 2px;" >
+
+	<td rowspan= "3">DOMO</td>
+
+	<td>Altura</td>
+
+	<td align= "right" id="altura32" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td >Superficie base</td>
+
+	<td align= "right" id= "ab32" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	<tr >
+
+	<td>Superficie cubierta</td>
+
+	<td align= "right" id= "ac32" style="border-left: none;"></td>
+
+
+
+
+
+	</tr>
+
+	</table>
+
+	 <br>
+
+	 <br>
+
+		</div>
+
+</div>
+
+</div>
+
+
+
+
+
+ </div>
+
+ 
+
+ </div> 
+
+ </div>
+
+ <br>
+
+
+
+ <br>
+
+</body>
+
+</html>

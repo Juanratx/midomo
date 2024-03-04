@@ -1,0 +1,734 @@
+ .btn {
+
+   /* border: none; */
+
+   background-color: #e6e6e6;
+
+   font-size: 0.6em;
+
+   cursor: pointer;
+
+   display: inline-block;
+
+ }
+
+
+
+ .loader {
+
+   position: fixed;
+
+   left: 0px;
+
+   top: 0px;
+
+   width: 100%;
+
+   height: 100%;
+
+   z-index: 9999;
+
+   background: url('img1/giphy.webp') 50% 50% no-repeat rgb(249, 249, 249);
+
+   opacity: 1;
+
+ }
+
+
+
+ #total {
+
+   max-width: 1300px;
+
+
+
+ }
+
+
+
+
+
+ #cabecera {
+
+   margin-top: 0px;
+
+   margin-left: 90px;
+
+
+
+ }
+
+
+
+ img#log {
+
+   height: auto;
+
+   /* background-image: url('img1/logo.jpg'); */
+
+   /* background-repeat: no-repeat; */
+
+   /* background-size: contain; */
+
+
+
+ }
+
+
+
+ #logo {
+
+   margin-top: 35px;
+
+   margin-left: 10px;
+
+   float: left;
+
+
+
+ }
+
+
+
+ #linea {
+
+   max-width: 92%;
+
+   height: 2px;
+
+
+
+ }
+
+
+
+ #resto {
+
+   margin-left: 80px;
+
+ }
+
+
+
+ #menu {
+
+   font-family: Arial;
+
+   font-size: 1.08em;
+   margin-left: 90px;
+   /*  margin-left: 290px; */
+
+   padding-bottom: 25px;
+
+   padding-top: 15px;
+   padding-left: 1px;
+
+   /* padding-left: 60px; */
+
+   float: left;
+
+
+
+ }
+
+
+
+
+
+ /*  seccion v4 columna 1  */
+
+ #tbV4 {
+
+   padding-top: 6px;
+
+ }
+
+ #imagenv4 {
+
+
+
+   float: left;
+
+   font-size: 1.00em;
+
+
+
+ }
+
+
+
+ #diametrogrosor {
+
+  float: right;
+
+   margin-top: 15px;
+
+ }
+
+ #diametrogrosor34 {
+
+   /*float: right; */
+
+   margin-top: 25px;
+
+ }
+
+
+
+ table#tabladiametrogrosor {
+
+   font-family: Arial;
+
+   font-size: 1.09em;
+
+   font-weight: bold;
+
+
+
+ }
+
+ table#tabladiametrogrosor34 {
+
+   font-family: Arial;
+
+   font-size: 1.09em;
+
+   font-weight: bold;
+
+
+
+ }
+
+
+
+ #tablacontenidos4 {
+
+   float: left;
+
+   padding-top: 15px;
+
+
+
+ }
+
+ #tablacontenidos34 {
+
+   float: left;
+
+   padding-top: 15px;
+
+
+
+ }
+
+ table#tabladiametrogrosor,
+ #tabladiametrogrosor td {
+
+   border: none;
+
+   vertical-align: bottom;
+
+   text-align: left;
+
+
+
+ }
+
+
+
+ table#tabladiametrogrosor34,
+ #tabladiametrogrosor34 td {
+
+   border: none;
+
+   vertical-align: bottom;
+
+   text-align: left;
+
+ }
+
+
+
+ #tablamain {
+
+   float: left;
+
+   max-width: 500px;
+
+
+
+ }
+
+ #columna2 {
+
+   float: left;
+
+   margin-top: 15px;
+
+   margin-left: 20px;
+
+   padding-top: 0px;
+
+   padding-left: 0px;
+
+ }
+
+ #columna234 {
+
+   float: left;
+
+   margin-top: 1px;
+
+   margin-left: 10px;
+
+   padding-top: 0px;
+
+   padding-left: 0px;
+
+ }
+
+
+
+ #tablamain th {
+
+   font-family: Arial;
+
+   border-bottom: solid 2px;
+
+   border-right: dashed 1px;
+
+ }
+
+
+
+
+
+ #tablamaint {
+
+   border-collapse: collapse;
+
+   border-top: solid 2px;
+
+   border-bottom: solid 2px;
+
+ }
+
+
+
+
+
+ #tablamaint td {
+
+   border-collapse: collapse;
+
+   font-family: Arial;
+
+   font-size: 1.3em;
+
+   padding-top: 5px;
+
+   padding-bottom: 0px;
+
+   border-right: dashed 1px;
+
+   border-bottom: dashed 1px;
+
+   vertical-align: bottom;
+
+   text-align: center;
+
+
+
+ }
+
+
+
+ #tablamain th:last-child {
+
+   border-right: none;
+
+ }
+
+
+
+ #tablamaint td:last-child {
+
+   border-right: none;
+
+ }
+
+ #tablamaint td:nth-child(6) {
+
+   border-right: none;
+
+ }
+
+ #tablamaint td:nth-child(4) {
+
+   font-size: 0.9em;
+
+ }
+
+
+
+ #trianguloscapa {
+
+
+
+   margin-top: 5px;
+
+ }
+
+ #triangulos {
+
+   max-width: 505px;
+
+   height: auto;
+
+ }
+
+ #tablamamaderacapa {
+
+
+
+   margin-top: 22px;
+
+   margin-right: 0px;
+
+ }
+
+
+
+ table#tablamamadera {
+
+   width: 505px;
+
+   border-collapse: collapse;
+
+   /* padding: 3px; */
+
+   font-family: Arial;
+
+   /* font-size:  1.08em;  */
+
+   border-top: solid 2px;
+
+   border-bottom: solid 2px;
+
+   border-left: dashed 1px;
+
+   border-right: dashed 1px;
+
+
+
+
+
+ }
+
+ #tablamamadera td {
+
+   border-collapse: collapse;
+
+   padding: 5px;
+
+   border-left: dashed 1px;
+
+   /* border-right: dashed 1px;	 */
+
+   border-bottom: dashed 1px;
+
+ }
+
+ /*#tablamamadera tr:nth-child(4) {
+
+
+
+    border-bottom: solid 2px; 
+
+ } */
+
+
+
+ /*  fin  seccion v4 columna 1 */
+
+
+
+
+
+
+
+
+
+ #tbV34 {
+
+   padding-top: 6px;
+
+ }
+
+
+
+ #imagenv34 {
+
+   float: left;
+
+   font-size: 1.00em;
+
+
+
+
+
+ }
+
+ #imagenv35 {
+
+   float: left;
+
+   font-size: 1.00em;
+
+
+
+
+
+ }
+
+
+
+
+
+
+
+ #diametrogrosor35 {
+
+   float: right;
+
+   font-size: 1.08em;
+
+   /*   margin-right: 250px;
+
+  margin-top: 35px;	
+
+  padding-left: 35px;
+
+  padding-top: 15px; */
+
+ }
+
+
+
+
+
+
+
+
+
+ #tablamain34 {
+
+   float: left;
+
+   max-width: 500px;
+
+
+
+ }
+
+
+
+
+
+ #triangulos34 {
+
+   /* max-width: 505px; */
+
+   /* height: auto; */
+
+   margin-top: 25px;
+
+
+
+ }
+
+ /*#triangulos35 {
+
+    max-width: 505px; 
+
+   height: auto; 
+
+    margin-top: 35px; 
+
+
+
+ }*/
+
+ #imagenV4 {
+
+
+
+   max-width: 228px;
+
+   height: auto;
+
+ }
+
+
+
+
+
+ #tablamain34 th {
+
+   font-family: Arial;
+
+   border-bottom: solid 2px;
+
+   border-right: dashed 1px;
+
+ }
+
+
+
+
+
+ #tablamaint34 {
+
+   border-collapse: collapse;
+
+   border-top: solid 2px;
+
+   border-bottom: solid 2px;
+
+ }
+
+
+
+
+
+ #tablamaint34 td {
+
+   border-collapse: collapse;
+
+   font-family: Arial;
+
+   font-size: 1.3em;
+
+   padding-top: 5px;
+
+   padding-bottom: 0px;
+
+   border-right: dashed 1px;
+
+   border-bottom: dashed 1px;
+
+   vertical-align: bottom;
+
+   text-align: center;
+
+
+
+ }
+
+
+
+ #tablamain34 th:last-child {
+
+   border-right: none;
+
+ }
+
+
+
+ #tablamaint34 td:last-child {
+
+   border-right: none;
+
+ }
+
+ #tablamaint34 td:nth-child(6) {
+
+   border-right: none;
+
+ }
+
+ #tablamaint34 td:nth-child(4) {
+
+   font-size: 0.9em;
+
+ }
+
+
+
+ #tablamamaderacapa34 {
+
+
+
+   margin-top: 37px;
+
+   margin-left: 5px;
+
+ }
+
+
+
+ table#tablamamadera34 {
+
+   width: 515px;
+
+   border-collapse: collapse;
+
+   /* padding: 3px; */
+
+   font-family: Arial;
+
+   /* font-size:  1.08em;  */
+
+   border-top: solid 2px;
+
+   border-bottom: solid 2px;
+
+   border-left: dashed 1px;
+
+   border-right: dashed 1px;
+
+
+
+
+
+ }
+
+ #tablamamadera34 td {
+
+   border-collapse: collapse;
+
+   padding: 5px;
+
+   border-left: dashed 1px;
+
+   /* border-right: dashed 1px;	 */
+
+   border-bottom: dashed 1px;
+
+ }
+
+  /* #tablamamadera34 tr:nth-child(4) {
+
+
+
+    border-bottom: solid 2px; 
+
+ }*/
+
+
+
+ #tbV34 {
+
+
+
+   padding-top: 6px;
+
+ }
+
+ #tbV35 {
+
+
+
+   padding-top: 6px;
+
+ }
